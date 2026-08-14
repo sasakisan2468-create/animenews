@@ -1,0 +1,13 @@
+{
+  "version": 2,
+  "builds": [
+    {
+      "src": "frontend/**",
+      "use": "@vercel/static"
+    }
+  ],
+  "routes": [
+    { "src": "/admin", "dest": "/frontend/admin.html" },
+    { "src": "/(.*)", "dest": "/frontend/$1" }
+  ]
+}
